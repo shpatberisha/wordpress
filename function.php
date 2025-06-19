@@ -47,6 +47,64 @@ function config() {
 
         add_action('after_setup_theme','config',0);
 
+        function wp_devs_sidebar(){
+            register_sidebar(
+                array(
+                    'name'=>'Blog Sidebar',
+                    'id'=>'sidebar-blog',
+                    'description'=>'This is the blog Sidebar.You can add your widget here',
+                    'before_widget'=>'<div class="widget-wrapper">',
+                    'after_widget'=>'</div>',
+                    'before_tittle'=>'<h4 class="widget-title">',
+                    'after_title'=>'</h4>'
+                )
+                );
+
+                register_sidebar(
+                    array(
+                    'name'=>'Service 1',
+                    'id'=>'sevisec-1',
+                    'description'=>'First Servise Area',
+                    'before_widget'=>'<div class="widget-wrapper">',
+                    'after_widget'=>'</div>',
+                    'before_tittle'=>'<h4 class="widget-title">',
+                    'after_title'=>'</h4>'
+
+                    )
+
+                );
+
+                register_sidebar(
+                    array(
+                    'name'=>'Service 2',
+                    'id'=>'sevisec-2',
+                    'description'=>'Second Servise Area',
+                    'before_widget'=>'<div class="widget-wrapper">',
+                    'after_widget'=>'</div>',
+                    'before_tittle'=>'<h4 class="widget-title">',
+                    'after_title'=>'</h4>'
+
+                    )
+
+                );
+
+                register_sidebar(
+                    array(
+                    'name'=>'Service 3',
+                    'id'=>'sevisec-3',
+                    'description'=>'Third Servise Area',
+                    'before_widget'=>'<div class="widget-wrapper">',
+                    'after_widget'=>'</div>',
+                    'before_tittle'=>'<h4 class="widget-title">',
+                    'after_title'=>'</h4>'
+
+                    )
+
+                );
+        }
+
+        add_action('widget_init','wp_devs_sidebars'); d
+
 
 
 
